@@ -2,157 +2,188 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Bhemesha C M | SEO Specialist Portfolio</title>
-<meta name="description" content="SEO Specialist with 4+ years scaling organic traffic, building backlinks, and optimizing for GEO/AI search. Based in Bangalore, India."/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bhemesha C M — SEO Specialist</title>
+<meta name="description" content="SEO Specialist with 4+ years helping B2B companies grow organic traffic, leads, and AI search visibility. Based in Bangalore, India."/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
-  :root{
-    --bg:#0a0a0f;
-    --bg2:#111118;
-    --card:#16161f;
-    --border:#2a2a3a;
-    --accent:#7c5cfc;
-    --accent2:#00d4aa;
-    --text:#e8e8f0;
-    --muted:#888899;
-    --font:'Segoe UI',system-ui,sans-serif;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:#0d0d0d;color:#f0f0f0;line-height:1.6;overflow-x:hidden;}
 
-  /* NAV */
-  nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100;padding:0 5%;}
-  .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:60px;}
-  .logo{font-weight:700;font-size:1.1rem;color:#fff;letter-spacing:.5px;}
-  .logo span{color:var(--accent);}
-  .nav-links{display:flex;gap:28px;list-style:none;}
-  .nav-links a{text-decoration:none;color:var(--muted);font-size:.88rem;transition:color .2s;}
-  .nav-links a:hover{color:var(--accent2);}
-  .nav-cta{background:var(--accent);color:#fff;border:none;padding:8px 20px;border-radius:20px;cursor:pointer;font-size:.85rem;font-weight:600;transition:opacity .2s;}
-  .nav-cta:hover{opacity:.85;}
+/* TOKENS */
+:root{
+  --bg:#0d0d0d;
+  --bg2:#111111;
+  --card:#161616;
+  --card2:#1a1a1a;
+  --border:#2a2a2a;
+  --border2:#333;
+  --green:#00e5a0;
+  --green-dim:rgba(0,229,160,0.08);
+  --green-border:rgba(0,229,160,0.2);
+  --text:#f0f0f0;
+  --muted:#888;
+  --muted2:#555;
+}
 
-  /* SECTIONS */
-  section{padding:90px 5%;max-width:1100px;margin:auto;}
-  .section-tag{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);font-weight:600;margin-bottom:10px;}
-  h2.section-title{font-size:2rem;font-weight:700;margin-bottom:40px;color:#fff;}
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:0 6%;background:rgba(13,13,13,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1140px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:62px;}
+.logo{font-size:.95rem;font-weight:700;color:#fff;letter-spacing:.5px;}
+.logo span{color:var(--green);}
+.nav-links{display:flex;gap:30px;list-style:none;}
+.nav-links a{font-size:.8rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav-btn{font-size:.8rem;font-weight:600;color:#000;background:var(--green);padding:9px 22px;border-radius:8px;text-decoration:none;transition:opacity .2s;}
+.nav-btn:hover{opacity:.85;}
 
-  /* HERO */
-  #hero{max-width:100%;padding:0;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 60% 40%,rgba(124,92,252,.15) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(0,212,170,.1) 0%,transparent 50%),var(--bg);}
-  .hero-content{padding:20px;z-index:1;}
-  .hero-badge{display:inline-block;background:rgba(124,92,252,.15);border:1px solid rgba(124,92,252,.4);color:var(--accent);padding:6px 18px;border-radius:20px;font-size:.8rem;font-weight:600;letter-spacing:1px;margin-bottom:24px;}
-  h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;line-height:1.15;color:#fff;margin-bottom:16px;}
-  h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-  .hero-sub{font-size:1.05rem;color:var(--muted);max-width:560px;margin:0 auto 32px;}
-  .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .btn-primary{background:var(--accent);color:#fff;padding:13px 30px;border-radius:25px;text-decoration:none;font-weight:700;font-size:.9rem;transition:transform .2s,box-shadow .2s;}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,92,252,.4);}
-  .btn-outline{border:1px solid var(--border);color:var(--text);padding:13px 30px;border-radius:25px;text-decoration:none;font-weight:600;font-size:.9rem;transition:border-color .2s,color .2s;}
-  .btn-outline:hover{border-color:var(--accent2);color:var(--accent2);}
-  .hero-stats{display:flex;gap:48px;justify-content:center;margin-top:60px;flex-wrap:wrap;}
-  .stat{text-align:center;}
-  .stat-num{font-size:2rem;font-weight:800;color:#fff;}
-  .stat-num span{color:var(--accent);}
-  .stat-label{font-size:.78rem;color:var(--muted);margin-top:2px;}
+/* HERO */
+#hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:100px 6% 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,160,0.07) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none;}
+.hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,160,0.04) 0%,transparent 70%);bottom:0;left:10%;pointer-events:none;}
+.hero-wrap{max-width:1140px;margin:auto;width:100%;display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center;}
+.hero-left{}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--green-dim);border:1px solid var(--green-border);color:var(--green);font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px;margin-bottom:28px;}
+.hero-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--green);}
+h1{font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:800;line-height:1.12;color:#fff;margin-bottom:22px;}
+h1 em{font-style:normal;color:var(--green);}
+.hero-para{font-size:.97rem;color:var(--muted);max-width:480px;line-height:1.8;margin-bottom:36px;font-weight:300;}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+.cta-main{background:var(--green);color:#000;font-weight:700;font-size:.85rem;padding:13px 28px;border-radius:8px;text-decoration:none;transition:opacity .2s;}
+.cta-main:hover{opacity:.85;}
+.cta-sec{border:1px solid var(--border2);color:var(--text);font-weight:500;font-size:.85rem;padding:13px 28px;border-radius:8px;text-decoration:none;transition:border-color .2s,color .2s;}
+.cta-sec:hover{border-color:var(--green);color:var(--green);}
+.hero-right{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px 22px;transition:border-color .25s;}
+.stat-card:hover{border-color:var(--green-border);}
+.stat-card.wide{grid-column:span 2;background:linear-gradient(135deg,#111 0%,#161616 100%);border-color:var(--green-border);}
+.stat-n{font-size:2rem;font-weight:800;color:#fff;line-height:1;}
+.stat-card.wide .stat-n{color:var(--green);}
+.stat-l{font-size:.75rem;color:var(--muted);margin-top:7px;font-weight:400;line-height:1.5;}
 
-  /* ABOUT */
-  #about{padding-top:100px;}
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
-  .about-text p{color:var(--muted);margin-bottom:16px;font-size:.97rem;}
-  .about-text p strong{color:var(--text);}
-  .about-highlights{display:flex;flex-direction:column;gap:14px;}
-  .highlight-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s;}
-  .highlight-card:hover{border-color:var(--accent);}
-  .hi{font-size:1.4rem;}
-  .highlight-card h4{font-size:.9rem;color:#fff;margin-bottom:3px;}
-  .highlight-card p{font-size:.82rem;color:var(--muted);}
+/* SECTION BASE */
+.wrap{max-width:1140px;margin:auto;padding:96px 6%;}
+.sec-label{font-size:.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);margin-bottom:10px;}
+.sec-title{font-size:clamp(1.7rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:52px;line-height:1.2;}
 
-  /* SKILLS */
-  #skills{background:var(--bg2);max-width:100%;padding:90px 5%;}
-  #skills .inner{max-width:1100px;margin:auto;}
-  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
-  .skill-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;transition:border-color .2s,transform .2s;}
-  .skill-card:hover{border-color:var(--accent);transform:translateY(-3px);}
-  .skill-card h3{font-size:.95rem;color:var(--accent2);margin-bottom:14px;font-weight:600;}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;}
-  .tag{background:rgba(255,255,255,.05);border:1px solid var(--border);color:var(--text);padding:4px 12px;border-radius:20px;font-size:.78rem;}
-  .tag.accent{background:rgba(124,92,252,.12);border-color:rgba(124,92,252,.3);color:var(--accent);}
-  .tag.green{background:rgba(0,212,170,.1);border-color:rgba(0,212,170,.3);color:var(--accent2);}
+/* ABOUT */
+#about{background:var(--bg);}
+.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:72px;align-items:start;}
+.about-text p{font-size:.93rem;color:#b0b0b0;line-height:1.85;margin-bottom:18px;font-weight:300;}
+.about-text p strong{color:#fff;font-weight:600;}
+.about-text p:last-child{margin-bottom:0;}
+.info-panel{display:flex;flex-direction:column;gap:0;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.info-row{padding:18px 22px;border-bottom:1px solid var(--border);}
+.info-row:last-child{border-bottom:none;}
+.info-key{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);margin-bottom:5px;}
+.info-val{font-size:.85rem;font-weight:500;color:#ddd;line-height:1.5;}
 
-  /* EXPERIENCE */
-  .timeline{display:flex;flex-direction:column;gap:32px;}
-  .job-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;position:relative;transition:border-color .2s;}
-  .job-card:hover{border-color:var(--accent);}
-  .job-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
-  .job-title{font-size:1.1rem;font-weight:700;color:#fff;}
-  .job-company{color:var(--accent);font-weight:600;font-size:.9rem;margin-top:3px;}
-  .job-meta{text-align:right;}
-  .job-date{font-size:.8rem;color:var(--muted);}
-  .job-location{font-size:.8rem;color:var(--muted);}
-  .job-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
-  .badge{padding:3px 10px;border-radius:12px;font-size:.72rem;font-weight:600;}
-  .badge-blue{background:rgba(124,92,252,.15);color:var(--accent);}
-  .badge-green{background:rgba(0,212,170,.12);color:var(--accent2);}
-  .job-bullets{list-style:none;display:flex;flex-direction:column;gap:10px;}
-  .job-bullets li{font-size:.88rem;color:var(--muted);padding-left:18px;position:relative;line-height:1.55;}
-  .job-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.85rem;}
-  .job-bullets li strong{color:var(--text);}
+/* SKILLS */
+#skills{background:#0a0a0a;}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color .25s,transform .25s;}
+.skill-card:hover{border-color:var(--green-border);transform:translateY(-3px);}
+.skill-card-title{font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);margin-bottom:16px;}
+.pills{display:flex;flex-wrap:wrap;gap:7px;}
+.pill{font-size:.72rem;font-weight:500;background:#1e1e1e;border:1px solid var(--border2);color:#ccc;padding:4px 11px;border-radius:20px;}
 
-  /* METRICS */
-  #metrics{background:var(--bg2);max-width:100%;padding:90px 5%;}
-  #metrics .inner{max-width:1100px;margin:auto;}
-  .metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-  .metric-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;text-align:center;transition:border-color .2s,transform .2s;}
-  .metric-card:hover{border-color:var(--accent2);transform:translateY(-3px);}
-  .metric-num{font-size:2.2rem;font-weight:800;color:#fff;line-height:1;}
-  .metric-num .unit{font-size:1.2rem;color:var(--accent);}
-  .metric-label{font-size:.8rem;color:var(--muted);margin-top:6px;}
-  .metric-sub{font-size:.72rem;color:var(--accent2);margin-top:4px;}
+/* EXPERIENCE */
+#experience{background:var(--bg);}
+.exp-list{display:flex;flex-direction:column;gap:28px;}
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:36px;transition:border-color .25s;}
+.exp-card:hover{border-color:var(--border2);}
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:18px;flex-wrap:wrap;}
+.exp-role{font-size:1.05rem;font-weight:700;color:#fff;}
+.exp-co{font-size:.85rem;font-weight:600;color:var(--green);margin-top:4px;}
+.exp-meta{text-align:right;}
+.exp-date{font-size:.78rem;color:var(--muted);font-weight:400;}
+.exp-loc{font-size:.75rem;color:var(--muted2);margin-top:3px;}
+.exp-badges{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px;}
+.badge{font-size:.68rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;background:#1c1c1c;border:1px solid var(--border2);color:var(--muted);padding:4px 10px;border-radius:5px;}
+.exp-ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
+.exp-ul li{font-size:.87rem;color:#a0a0a0;padding-left:16px;position:relative;line-height:1.65;font-weight:300;}
+.exp-ul li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:1px;background:var(--green);}
+.exp-ul strong{color:#e0e0e0;font-weight:600;}
 
-  /* CASE STUDIES */
-  .cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;}
-  .case-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s,transform .2s;}
-  .case-card:hover{border-color:var(--accent);transform:translateY(-4px);}
-  .case-tag{font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);margin-bottom:10px;}
-  .case-card h3{font-size:1.05rem;color:#fff;margin-bottom:10px;}
-  .case-card p{font-size:.85rem;color:var(--muted);margin-bottom:16px;}
-  .case-results{display:flex;gap:12px;flex-wrap:wrap;}
-  .result-pill{background:rgba(0,212,170,.08);border:1px solid rgba(0,212,170,.2);color:var(--accent2);padding:4px 10px;border-radius:10px;font-size:.75rem;font-weight:600;}
+/* METRICS */
+#metrics{background:#0a0a0a;}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.m-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:30px 22px;text-align:center;transition:border-color .25s,transform .25s;}
+.m-card:hover{border-color:var(--green-border);transform:translateY(-3px);}
+.m-card:first-child{background:linear-gradient(135deg,rgba(0,229,160,0.06),rgba(0,229,160,0.02));border-color:var(--green-border);}
+.m-n{font-size:2rem;font-weight:800;color:#fff;line-height:1;}
+.m-l{font-size:.75rem;color:var(--muted);margin-top:8px;font-weight:400;}
+.m-s{font-size:.65rem;color:var(--muted2);margin-top:4px;}
 
-  /* GEO */
-  .geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;}
-  .geo-text p{color:var(--muted);font-size:.95rem;margin-bottom:14px;}
-  .geo-platforms{display:flex;flex-direction:column;gap:12px;}
-  .platform-row{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;}
-  .platform-icon{font-size:1.3rem;}
-  .platform-name{font-weight:600;font-size:.9rem;color:#fff;}
-  .platform-desc{font-size:.78rem;color:var(--muted);}
+/* CASE STUDIES */
+#cases{background:var(--bg);}
+.cases-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
+.case-item{display:grid;grid-template-columns:220px 1fr;gap:60px;padding:52px 0;border-bottom:1px solid var(--border);align-items:start;}
+.case-left{}
+.case-num{font-size:3.5rem;font-weight:800;color:#222;line-height:1;margin-bottom:14px;}
+.case-type{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.case-right{}
+.case-title{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:14px;line-height:1.4;}
+.case-desc{font-size:.87rem;color:#999;line-height:1.8;margin-bottom:22px;font-weight:300;}
+.case-results{display:flex;flex-wrap:wrap;gap:8px;}
+.result-tag{font-size:.72rem;font-weight:600;color:var(--green);background:var(--green-dim);border:1px solid var(--green-border);padding:5px 12px;border-radius:6px;}
 
-  /* CONTACT */
-  #contact{background:var(--bg2);max-width:100%;padding:90px 5%;}
-  #contact .inner{max-width:700px;margin:auto;text-align:center;}
-  #contact p{color:var(--muted);font-size:.97rem;margin-bottom:36px;}
-  .contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-  .contact-btn{display:flex;align-items:center;gap:8px;padding:14px 24px;border-radius:12px;text-decoration:none;font-weight:600;font-size:.9rem;transition:transform .2s,box-shadow .2s;}
-  .contact-btn:hover{transform:translateY(-2px);}
-  .contact-btn.email{background:var(--accent);color:#fff;}
-  .contact-btn.email:hover{box-shadow:0 8px 24px rgba(124,92,252,.4);}
-  .contact-btn.linkedin{background:#0a66c2;color:#fff;}
-  .contact-btn.linkedin:hover{box-shadow:0 8px 24px rgba(10,102,194,.4);}
-  .contact-btn.phone{background:var(--card);border:1px solid var(--border);color:var(--text);}
-  .contact-info{margin-top:32px;font-size:.85rem;color:var(--muted);}
+/* GEO */
+#geo{background:#0a0a0a;}
+.geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.geo-text p{font-size:.93rem;color:#a0a0a0;line-height:1.85;margin-bottom:18px;font-weight:300;}
+.geo-text p strong{color:#fff;font-weight:600;}
+.geo-text p:last-child{margin-bottom:0;}
+.geo-table{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
+.geo-row{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);align-items:start;}
+.geo-plat{font-size:.78rem;font-weight:700;color:#fff;}
+.geo-detail{font-size:.8rem;color:var(--muted);line-height:1.6;font-weight:300;}
 
-  /* FOOTER */
-  footer{text-align:center;padding:28px 5%;border-top:1px solid var(--border);font-size:.8rem;color:var(--muted);}
+/* CONTACT */
+#contact{background:var(--bg);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.contact-text p{font-size:.93rem;color:#a0a0a0;line-height:1.85;font-weight:300;margin-bottom:28px;}
+.contact-links{display:flex;flex-direction:column;gap:10px;}
+.c-link{display:flex;flex-direction:column;gap:3px;text-decoration:none;padding:18px 20px;border:1px solid var(--border);border-radius:12px;transition:border-color .2s,background .2s;}
+.c-link:hover{border-color:var(--green-border);background:var(--green-dim);}
+.c-key{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);}
+.c-val{font-size:.88rem;font-weight:500;color:#ddd;}
+.avail-card{background:var(--card);border:1px solid var(--green-border);border-radius:16px;padding:36px;}
+.avail-dot-row{display:flex;align-items:center;gap:8px;margin-bottom:18px;}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);}
+.avail-status{font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);}
+.avail-card h3{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3;}
+.avail-card p{font-size:.85rem;color:var(--muted);line-height:1.7;font-weight:300;}
 
-  /* RESPONSIVE */
-  @media(max-width:768px){
-    .about-grid,.geo-grid{grid-template-columns:1fr;}
-    .nav-links{display:none;}
-    .hero-stats{gap:28px;}
-    h2.section-title{font-size:1.6rem;}
-    .job-meta{text-align:left;}
-  }
+/* FOOTER */
+footer{background:#080808;border-top:1px solid var(--border);padding:28px 6%;display:flex;justify-content:space-between;align-items:center;max-width:100%;}
+.footer-inner{max-width:1140px;margin:auto;width:100%;display:flex;justify-content:space-between;align-items:center;}
+footer span{font-size:.78rem;color:var(--muted2);font-weight:400;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-wrap,.about-grid,.geo-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .hero-right{grid-template-columns:1fr 1fr;}
+  .skills-grid{grid-template-columns:1fr 1fr;}
+  .metrics-grid{grid-template-columns:1fr 1fr;}
+  .case-item{grid-template-columns:1fr;gap:16px;}
+  .case-num{font-size:2rem;}
+  .nav-links{display:none;}
+  .exp-meta{text-align:left;}
+  footer .footer-inner{flex-direction:column;gap:8px;text-align:center;}
+}
+@media(max-width:560px){
+  .skills-grid{grid-template-columns:1fr;}
+  .hero-right{grid-template-columns:1fr;}
+  .stat-card.wide{grid-column:span 1;}
+}
 </style>
 </head>
 <body>
@@ -160,301 +191,475 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <div class="logo">Bhemesha <span>C M</span></div>
+    <div class="logo">Bhemesha <span>CM</span></div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#metrics">Results</a></li>
-      <li><a href="#cases">Case Studies</a></li>
+      <li><a href="#cases">Work</a></li>
       <li><a href="#geo">GEO</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="mailto:bheemb300@gmail.com"><button class="nav-cta">Hire Me</button></a>
+    <a class="nav-btn" href="mailto:bheemb300@gmail.com">Hire Me</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<div id="hero">
-  <div class="hero-content">
-    <div class="hero-badge">🚀 Available for New Opportunities</div>
-    <h1>Bhemesha C M<br/><span>SEO Specialist</span></h1>
-    <p class="hero-sub">4+ years turning search intent into organic growth — from technical fixes to AI search optimization. Based in Bangalore, India.</p>
-    <div class="hero-btns">
-      <a href="#cases" class="btn-primary">View Case Studies</a>
-      <a href="#contact" class="btn-outline">Get In Touch</a>
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-wrap">
+    <div class="hero-left">
+      <div class="hero-eyebrow"><span></span>SEO Specialist · Bangalore, India</div>
+      <h1>I turn search into a<br/><em>real lead channel.</em></h1>
+      <p class="hero-para">Four years working with B2B SaaS and tech companies on organic growth — technical SEO, content strategy, link building, and now AI search optimization. I focus on what actually moves the needle.</p>
+      <div class="hero-ctas">
+        <a href="#cases" class="cta-main">See My Work</a>
+        <a href="#contact" class="cta-sec">Get in Touch</a>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num">2.5<span>×</span></div><div class="stat-label">Organic Traffic Scaled</div></div>
-      <div class="stat"><div class="stat-num">33<span>K+</span></div><div class="stat-label">Backlinks Built</div></div>
-      <div class="stat"><div class="stat-num">2.8<span>K+</span></div><div class="stat-label">Page 1 Keywords</div></div>
-      <div class="stat"><div class="stat-num">4<span>+</span></div><div class="stat-label">Years Experience</div></div>
+    <div class="hero-right">
+      <div class="stat-card wide">
+        <div class="stat-n">4+ Years</div>
+        <div class="stat-l">B2B SaaS, healthcare data, and awards platforms — all targeting competitive North American markets</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">2.5×</div>
+        <div class="stat-l">Organic traffic growth in 6 months</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">33K+</div>
+        <div class="stat-l">Backlinks built across campaigns</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">2,800+</div>
+        <div class="stat-l">Keywords ranked on Google Page 1</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">40+</div>
+        <div class="stat-l">SQL leads/month from AI search</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-tag">Who I Am</div>
-  <h2 class="section-title">About Me</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>I'm a <strong>Search Engine Optimization Specialist</strong> based in Bangalore, India, with 4+ years of hands-on experience helping B2B SaaS and tech companies grow their organic presence in competitive North American markets.</p>
-      <p>My approach blends <strong>technical precision with content strategy</strong> — fixing the foundation first, then scaling through smart keyword targeting, entity optimization, and E-E-A-T improvements.</p>
-      <p>Recently, I've expanded into <strong>Generative Engine Optimization (GEO)</strong> — optimizing content for AI-powered search platforms like ChatGPT, Gemini, and Perplexity, which now drives measurable traffic and SQL leads.</p>
-      <p>I hold an <strong>MBA from Maharaja Institute of Technology Mysore (VTU)</strong>, which gives me a business-first lens on every SEO decision I make.</p>
-    </div>
-    <div class="about-highlights">
-      <div class="highlight-card"><div class="hi">🎯</div><div><h4>B2B SEO Focus</h4><p>Specialized in North America–targeting B2B SaaS and tech platforms where organic leads directly impact revenue.</p></div></div>
-      <div class="highlight-card"><div class="hi">🤖</div><div><h4>GEO Pioneer</h4><p>Early adopter of Generative Engine Optimization — getting brands cited in ChatGPT, Gemini & Perplexity answers.</p></div></div>
-      <div class="highlight-card"><div class="hi">🔗</div><div><h4>Link Building Expert</h4><p>Built 33,000+ niche-relevant backlinks across campaigns through outreach, partnerships & strategic placements.</p></div></div>
-      <div class="highlight-card"><div class="hi">📈</div><div><h4>Data-Driven</h4><p>Every decision backed by GA4, GSC, Ahrefs & SEMrush — not assumptions.</p></div></div>
+  <div class="wrap">
+    <div class="sec-label">About</div>
+    <div class="sec-title">A bit about me</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm an SEO Specialist based in Bangalore with four years of experience helping B2B SaaS and tech companies grow their organic presence in North American markets. My work covers the full spectrum — technical audits, content optimization, link building, and more recently, optimizing for AI-powered search platforms.</p>
+        <p>At DemandNXT, I worked on a B2B healthcare data platform that had real technical problems holding it back — crawl errors, redirect issues, 600+ pages with no clear search intent mapping, and a weak backlink profile. Fixing all of that and building it back up grew organic traffic 2.5× in six months and took monthly leads from 60 to 250.</p>
+        <p>At Zyoin Group, I built a workplace awards site's entire SEO foundation from scratch — before launch. That site went from zero to 25,000+ monthly visits with an 80% engagement rate. At Star Knowledge, I doubled organic traffic for a B2B SaaS brand while cutting bounce rate from 60% to 20%.</p>
+        <p>More recently, I've been doing serious work in <strong>Generative Engine Optimization (GEO)</strong> — getting client content cited by ChatGPT, Gemini, and Perplexity. That now accounts for 10% of monthly traffic and over 40 SQL leads per month for one client.</p>
+        <p>I hold an <strong>MBA from Maharaja Institute of Technology Mysore (VTU)</strong>, which gives me a business perspective on every SEO decision — I care about leads and revenue, not just rankings.</p>
+      </div>
+      <div class="info-panel">
+        <div class="info-row">
+          <div class="info-key">Current Role</div>
+          <div class="info-val">Digital Marketing Specialist<br/>DemandNXT</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">Location</div>
+          <div class="info-val">Bangalore, India<br/>Open to remote roles</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">Specialization</div>
+          <div class="info-val">B2B SEO · Link Building<br/>GEO / AI Search</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">Core Tools</div>
+          <div class="info-val">Ahrefs · SEMrush · GA4<br/>GSC · Screaming Frog</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">Education</div>
+          <div class="info-val">MBA · VTU<br/>Maharaja Institute of Technology</div>
+        </div>
+        <div class="info-row">
+          <div class="info-key">Email</div>
+          <div class="info-val">bheemb300@gmail.com</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<div id="skills">
-  <div class="inner">
-    <div class="section-tag">Expertise</div>
-    <h2 class="section-title">Skills & Tools</h2>
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-label">Capabilities</div>
+    <div class="sec-title">Skills & tools</div>
     <div class="skills-grid">
       <div class="skill-card">
-        <h3>🔍 SEO Strategy</h3>
-        <div class="tags">
-          <span class="tag">Technical SEO</span><span class="tag">On-Page SEO</span><span class="tag">Off-Page SEO</span><span class="tag">Site Audits</span><span class="tag">Core Web Vitals</span><span class="tag">Schema Markup</span>
+        <div class="skill-card-title">Technical SEO</div>
+        <div class="pills">
+          <span class="pill">Site Audits</span>
+          <span class="pill">Core Web Vitals</span>
+          <span class="pill">Crawl Optimization</span>
+          <span class="pill">Schema Markup</span>
+          <span class="pill">Indexing</span>
+          <span class="pill">Redirect Management</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>📝 Content & Keywords</h3>
-        <div class="tags">
-          <span class="tag">Keyword Research</span><span class="tag">Search Intent Analysis</span><span class="tag">Content Strategy</span><span class="tag">Semantic SEO</span><span class="tag">Topic Clusters</span><span class="tag">Content Optimization</span>
+        <div class="skill-card-title">Content & Keywords</div>
+        <div class="pills">
+          <span class="pill">Keyword Research</span>
+          <span class="pill">Search Intent</span>
+          <span class="pill">Semantic SEO</span>
+          <span class="pill">Topic Clusters</span>
+          <span class="pill">Content Optimization</span>
+          <span class="pill">E-E-A-T</span>
+          <span class="pill">Internal Linking</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>🔗 Link Building</h3>
-        <div class="tags">
-          <span class="tag">Link Acquisition</span><span class="tag">Outreach</span><span class="tag">Competitor Backlink Analysis</span><span class="tag">Industry Directories</span><span class="tag">Partner Placements</span>
+        <div class="skill-card-title">Link Building</div>
+        <div class="pills">
+          <span class="pill">Outreach</span>
+          <span class="pill">Competitor Analysis</span>
+          <span class="pill">Industry Directories</span>
+          <span class="pill">Partner Placements</span>
+          <span class="pill">Niche Acquisition</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>🤖 AI SEO (GEO)</h3>
-        <div class="tags">
-          <span class="tag accent">GEO</span><span class="tag accent">LLM Optimization</span><span class="tag accent">ChatGPT SEO</span><span class="tag accent">Gemini SEO</span><span class="tag accent">Perplexity SEO</span>
+        <div class="skill-card-title">AI Search · GEO</div>
+        <div class="pills">
+          <span class="pill">GEO Strategy</span>
+          <span class="pill">LLM Optimization</span>
+          <span class="pill">AI Overviews</span>
+          <span class="pill">Entity Optimization</span>
+          <span class="pill">Citation Building</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>🛠️ Tools</h3>
-        <div class="tags">
-          <span class="tag green">GA4</span><span class="tag green">GSC</span><span class="tag green">Ahrefs</span><span class="tag green">SEMrush</span><span class="tag green">Screaming Frog</span><span class="tag green">Looker Studio</span><span class="tag green">Moz</span>
+        <div class="skill-card-title">Analytics & Tools</div>
+        <div class="pills">
+          <span class="pill">GA4</span>
+          <span class="pill">Google Search Console</span>
+          <span class="pill">Ahrefs</span>
+          <span class="pill">SEMrush</span>
+          <span class="pill">Screaming Frog</span>
+          <span class="pill">Looker Studio</span>
+          <span class="pill">Moz</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>💻 Technical</h3>
-        <div class="tags">
-          <span class="tag">WordPress</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Internal Linking</span><span class="tag">Crawl Optimization</span>
+        <div class="skill-card-title">Technical Stack</div>
+        <div class="pills">
+          <span class="pill">WordPress</span>
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">On-Page SEO</span>
+          <span class="pill">Off-Page SEO</span>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-tag">Career</div>
-  <h2 class="section-title">Work Experience</h2>
-  <div class="timeline">
+  <div class="wrap">
+    <div class="sec-label">Career</div>
+    <div class="sec-title">Work experience</div>
+    <div class="exp-list">
 
-    <div class="job-card">
-      <div class="job-header">
-        <div>
-          <div class="job-title">Digital Marketing Specialist</div>
-          <div class="job-company">DemandNXT</div>
+      <div class="exp-card">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">Digital Marketing Specialist</div>
+            <div class="exp-co">DemandNXT</div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-date">Oct 2024 – Apr 2026</div>
+            <div class="exp-loc">Bangalore</div>
+          </div>
         </div>
-        <div class="job-meta">
-          <div class="job-date">Oct 2024 – Apr 2026</div>
-          <div class="job-location">📍 Bangalore</div>
+        <div class="exp-badges">
+          <span class="badge">B2B Healthcare Data</span>
+          <span class="badge">North America</span>
+          <span class="badge">GEO</span>
         </div>
+        <ul class="exp-ul">
+          <li>Grew organic traffic <strong>2.5× in 6 months</strong> for a B2B healthcare data platform targeting North America.</li>
+          <li>Fixed indexing errors, redirect chains, and Core Web Vitals issues — improving crawl efficiency and ranking stability across the board.</li>
+          <li>Optimized <strong>600+ pages</strong> through search intent mapping, internal linking fixes, and keyword cannibalization cleanup — pushing <strong>2,800+ keywords to Google Page 1</strong>.</li>
+          <li>Built a backlink profile of <strong>15,000+ niche-relevant links</strong> through targeted outreach.</li>
+          <li>Grew monthly organic leads from <strong>60 to 250</strong> through landing page optimization and CRO; improved engagement rate from 40% to 75%.</li>
+          <li>Improved E-E-A-T through structured data, entity optimization, and content quality improvements.</li>
+          <li>Optimized content for generative AI platforms — generating <strong>10% of monthly traffic and 40+ SQL leads</strong> through ChatGPT, Gemini, and Perplexity.</li>
+        </ul>
       </div>
-      <div class="job-badges">
-        <span class="badge badge-blue">B2B Healthcare Data</span>
-        <span class="badge badge-green">North America Market</span>
-        <span class="badge badge-blue">GEO</span>
+
+      <div class="exp-card">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">SEO Analyst</div>
+            <div class="exp-co">Zyoin Group</div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-date">Dec 2023 – Sep 2024</div>
+            <div class="exp-loc">Bangalore</div>
+          </div>
+        </div>
+        <div class="exp-badges">
+          <span class="badge">Workplace Awards Platform</span>
+          <span class="badge">New Launch</span>
+        </div>
+        <ul class="exp-ul">
+          <li>Grew a newly launched awards platform from zero to <strong>25,000+ monthly visits</strong> with an 80% engagement rate.</li>
+          <li>Built the site's SEO foundation from scratch — structured all pages around high-intent keywords before launch.</li>
+          <li>Pushed <strong>50+ keywords into top 3 SERP positions</strong> through content optimization, schema markup, and UX improvements.</li>
+          <li>Designed landing pages that converted organic visitors into <strong>750+ award nominations</strong>.</li>
+          <li>Built a <strong>5,000+ backlink portfolio</strong> through award listings, partner platforms, and industry promotions.</li>
+        </ul>
       </div>
-      <ul class="job-bullets">
-        <li>Scaled organic traffic <strong>2.5× in 6 months</strong> for a B2B healthcare data platform targeting the North America market.</li>
-        <li>Fixed indexing errors, redirect chains, and Core Web Vitals issues, improving crawl efficiency and ranking stability.</li>
-        <li>Optimized <strong>600+ pages</strong> through search intent mapping, internal linking improvements, and resolving keyword cannibalization — driving <strong>2,800+ keywords to Google Page 1</strong>.</li>
-        <li>Expanded backlink profile to <strong>15,000+ niche-relevant links</strong> through targeted outreach campaigns.</li>
-        <li>Increased monthly organic leads from <strong>60 to 250</strong> through landing page optimization and CRO, improving engagement rate from 40% to 75%.</li>
-        <li>Strengthened content credibility through <strong>structured data, entity optimization, and E-E-A-T improvements</strong>.</li>
-        <li>Optimized content for generative AI search platforms, generating <strong>10% of monthly traffic + 40+ SQL leads</strong> via GEO.</li>
-      </ul>
+
+      <div class="exp-card">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">SEO Analyst</div>
+            <div class="exp-co">Star Knowledge</div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-date">Mar 2022 – Nov 2023</div>
+            <div class="exp-loc">Mysore</div>
+          </div>
+        </div>
+        <div class="exp-badges">
+          <span class="badge">B2B SaaS</span>
+          <span class="badge">North America</span>
+        </div>
+        <ul class="exp-ul">
+          <li>Doubled organic traffic for a North America–focused B2B SaaS website while cutting bounce rate from 60% to 20%.</li>
+          <li>Fixed technical SEO issues and optimized <strong>100+ pages</strong> through internal linking and on-page improvements.</li>
+          <li>Ranked <strong>100+ keywords in top 10 SERP positions</strong> through keyword research and content updates.</li>
+          <li>Secured <strong>13,000+ backlinks</strong> through targeted link acquisition and industry directory placements.</li>
+          <li>Improved conversion paths and page layouts, growing monthly leads from <strong>10 to 55</strong>.</li>
+        </ul>
+      </div>
+
     </div>
-
-    <div class="job-card">
-      <div class="job-header">
-        <div>
-          <div class="job-title">SEO Analyst</div>
-          <div class="job-company">Zyoin Group</div>
-        </div>
-        <div class="job-meta">
-          <div class="job-date">Dec 2023 – Sep 2024</div>
-          <div class="job-location">📍 Bangalore</div>
-        </div>
-      </div>
-      <div class="job-badges">
-        <span class="badge badge-blue">Workplace Awards Platform</span>
-        <span class="badge badge-green">New Launch</span>
-      </div>
-      <ul class="job-bullets">
-        <li>Scaled a <strong>newly launched workplace awards platform to 25,000+ monthly visits</strong> with an 80% engagement rate.</li>
-        <li>Built the awards website from scratch, structuring all pages around high-intent keywords and search intent.</li>
-        <li>Optimized page content, UX structure, and schema markup — pushing <strong>50+ keywords into top 3 SERP positions</strong>.</li>
-        <li>Designed award landing pages aligned with search intent, converting organic traffic into <strong>750+ nominations</strong>.</li>
-        <li>Built a <strong>5,000+ backlink portfolio</strong> via award listings, partner platforms, and industry promotions.</li>
-      </ul>
-    </div>
-
-    <div class="job-card">
-      <div class="job-header">
-        <div>
-          <div class="job-title">SEO Analyst</div>
-          <div class="job-company">Star Knowledge</div>
-        </div>
-        <div class="job-meta">
-          <div class="job-date">Mar 2022 – Nov 2023</div>
-          <div class="job-location">📍 Mysore</div>
-        </div>
-      </div>
-      <div class="job-badges">
-        <span class="badge badge-blue">B2B SaaS</span>
-        <span class="badge badge-green">North America Market</span>
-      </div>
-      <ul class="job-bullets">
-        <li>Grew organic traffic <strong>2× for a North America–focused B2B SaaS website</strong> while reducing bounce rate from 60% to 20%.</li>
-        <li>Fixed technical SEO issues and optimized <strong>100+ pages</strong> through internal linking and on-page improvements.</li>
-        <li>Executed keyword research and performance-driven content updates, ranking <strong>100+ keywords in top 10 SERP positions</strong>.</li>
-        <li>Secured <strong>13,000+ backlinks</strong> through targeted link acquisition and industry directories.</li>
-        <li>Improved conversion paths and page layouts, increasing monthly leads from <strong>10 to 55</strong>.</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
 <!-- METRICS -->
-<div id="metrics">
-  <div class="inner">
-    <div class="section-tag">By The Numbers</div>
-    <h2 class="section-title">Career Metrics</h2>
+<section id="metrics">
+  <div class="wrap">
+    <div class="sec-label">Results</div>
+    <div class="sec-title">By the numbers</div>
     <div class="metrics-grid">
-      <div class="metric-card"><div class="metric-num">2.5<span class="unit">×</span></div><div class="metric-label">Max Traffic Growth</div><div class="metric-sub">DemandNXT · 6 months</div></div>
-      <div class="metric-card"><div class="metric-num">33<span class="unit">K+</span></div><div class="metric-label">Total Backlinks Built</div><div class="metric-sub">Across all roles</div></div>
-      <div class="metric-card"><div class="metric-num">2.8<span class="unit">K+</span></div><div class="metric-label">Keywords on Page 1</div><div class="metric-sub">DemandNXT campaign</div></div>
-      <div class="metric-card"><div class="metric-num">25<span class="unit">K+</span></div><div class="metric-label">Monthly Visits</div><div class="metric-sub">Zyoin · new launch</div></div>
-      <div class="metric-card"><div class="metric-num">750<span class="unit">+</span></div><div class="metric-label">Nominations via Organic</div><div class="metric-sub">Zyoin · awards platform</div></div>
-      <div class="metric-card"><div class="metric-num">4×</div><div class="metric-label">Lead Growth</div><div class="metric-sub">60 → 250 leads/month</div></div>
-      <div class="metric-card"><div class="metric-num">40<span class="unit">+</span></div><div class="metric-label">SQL Leads via GEO</div><div class="metric-sub">AI search monthly</div></div>
-      <div class="metric-card"><div class="metric-num">600<span class="unit">+</span></div><div class="metric-label">Pages Optimized</div><div class="metric-sub">DemandNXT single campaign</div></div>
+      <div class="m-card">
+        <div class="m-n">2.5×</div>
+        <div class="m-l">Traffic growth</div>
+        <div class="m-s">DemandNXT · 6 months</div>
+      </div>
+      <div class="m-card">
+        <div class="m-n">33K+</div>
+        <div class="m-l">Backlinks built</div>
+        <div class="m-s">Across all roles</div>
+      </div>
+      <div class="m-card">
+        <div class="m-n">2,800+</div>
+        <div class="m-l">Page 1 keywords</div>
+        <div class="m-s">Single campaign</div>
+      </div>
+      <div class="m-card">
+        <div class="m-n">250</div>
+        <div class="m-l">Organic leads/mo</div>
+        <div class="m-s">Up from 60</div>
+      </div>
+      <div class="m-card">
+        <div class="m-n">25K+</div>
+        <div class="m-l">Monthly visits</div>
+        <div class="m-s">Zyoin · new launch</div>
+      </div>
+      <div class="m-card">
+        <div class="m-n">750+</div>
+        <div class="m-l">Nominations via SEO</div>
+        <div class="m-s">Zyoin awards platform</div>
+      </div>
+      <div class="m-card">
+        <div class="m-n">40+</div>
+        <div class="m-l">SQL leads via GEO</div>
+        <div class="m-s">Monthly from AI search</div>
+      </div>
+      <div class="m-card">
+        <div class="m-n">600+</div>
+        <div class="m-l">Pages optimized</div>
+        <div class="m-s">One campaign</div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- CASE STUDIES -->
 <section id="cases">
-  <div class="section-tag">Portfolio</div>
-  <h2 class="section-title">Case Studies</h2>
-  <div class="cases-grid">
+  <div class="wrap">
+    <div class="sec-label">Portfolio</div>
+    <div class="sec-title">Selected work</div>
+    <div class="cases-list">
 
-    <div class="case-card">
-      <div class="case-tag">B2B Healthcare · Technical + Content SEO</div>
-      <h3>2.5× Organic Traffic in 6 Months — B2B Healthcare Data Platform</h3>
-      <p>Inherited a technically broken site with crawl errors, redirect chains, and weak content. Conducted full audit, fixed Core Web Vitals, mapped 600+ pages to search intent, resolved keyword cannibalization, and launched structured outreach for backlinks.</p>
-      <div class="case-results">
-        <span class="result-pill">2.5× Traffic Growth</span>
-        <span class="result-pill">2,800+ Page 1 Keywords</span>
-        <span class="result-pill">15,000+ Backlinks</span>
-        <span class="result-pill">60 → 250 Leads/mo</span>
+      <div class="case-item">
+        <div class="case-left">
+          <div class="case-num">01</div>
+          <div class="case-type">B2B Healthcare · Technical SEO</div>
+        </div>
+        <div class="case-right">
+          <div class="case-title">2.5× organic traffic in 6 months — B2B healthcare data platform</div>
+          <p class="case-desc">The site had compounding problems: crawl errors, redirect chains, 600+ pages without clear intent mapping, and a thin backlink profile. I ran a full technical audit, fixed Core Web Vitals, mapped every page to search intent, resolved keyword cannibalization, and built a structured outreach pipeline. Within six months, the site was ranking for 2,800+ Page 1 keywords and generating 250 organic leads per month, up from 60.</p>
+          <div class="case-results">
+            <span class="result-tag">2.5× Organic Traffic</span>
+            <span class="result-tag">2,800+ Page 1 Keywords</span>
+            <span class="result-tag">15,000+ Backlinks</span>
+            <span class="result-tag">60 → 250 Leads/mo</span>
+            <span class="result-tag">Engagement Rate 40% → 75%</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="case-card">
-      <div class="case-tag">New Launch · Awards Platform SEO</div>
-      <h3>0 to 25,000 Monthly Visits — Workplace Awards Platform</h3>
-      <p>Built the entire SEO foundation from scratch for a newly launched awards site. Structured all pages around high-intent keywords, implemented schema markup, optimized UX for engagement, and built a 5,000+ link profile through niche directories and partnerships.</p>
-      <div class="case-results">
-        <span class="result-pill">25,000+ Monthly Visits</span>
-        <span class="result-pill">80% Engagement Rate</span>
-        <span class="result-pill">50+ Top 3 Keywords</span>
-        <span class="result-pill">750+ Nominations</span>
+      <div class="case-item">
+        <div class="case-left">
+          <div class="case-num">02</div>
+          <div class="case-type">New Launch · Awards Platform</div>
+        </div>
+        <div class="case-right">
+          <div class="case-title">Zero to 25,000 monthly visits — workplace awards site built from scratch</div>
+          <p class="case-desc">When you're starting from nothing, the SEO foundation has to be right before anything goes live. I structured the entire site around high-intent keywords, implemented schema markup, built the internal linking architecture, and launched a niche link building campaign through award listings and industry partners. The site hit 25,000+ monthly visits with an 80% engagement rate — and converted that traffic into 750+ award nominations, all organic.</p>
+          <div class="case-results">
+            <span class="result-tag">25,000+ Monthly Visits</span>
+            <span class="result-tag">80% Engagement Rate</span>
+            <span class="result-tag">50+ Top 3 Keywords</span>
+            <span class="result-tag">750+ Organic Nominations</span>
+            <span class="result-tag">5,000+ Backlinks</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="case-card">
-      <div class="case-tag">B2B SaaS · Full-Funnel SEO</div>
-      <h3>2× Traffic Growth + Bounce Rate Drop — B2B SaaS Website</h3>
-      <p>Inherited underperforming SaaS website with high bounce rates. Fixed technical issues, optimized 100+ pages, improved internal linking, and executed content updates aligned with top-of-funnel keywords — converting visitors into leads.</p>
-      <div class="case-results">
-        <span class="result-pill">2× Traffic Growth</span>
-        <span class="result-pill">Bounce Rate 60% → 20%</span>
-        <span class="result-pill">100+ Top 10 Keywords</span>
-        <span class="result-pill">10 → 55 Leads/mo</span>
+      <div class="case-item">
+        <div class="case-left">
+          <div class="case-num">03</div>
+          <div class="case-type">B2B SaaS · Full-Funnel SEO</div>
+        </div>
+        <div class="case-right">
+          <div class="case-title">2× traffic, bounce rate cut by two-thirds — B2B SaaS website</div>
+          <p class="case-desc">A 60% bounce rate told the real story: the site was bringing in the wrong visitors, or failing to give the right ones a reason to stay. I fixed the technical issues first, then overhauled 100+ pages — aligning content to the right keywords, rebuilding internal links, and redesigning conversion paths. Traffic doubled, bounce rate dropped to 20%, and monthly leads went from 10 to 55.</p>
+          <div class="case-results">
+            <span class="result-tag">2× Organic Traffic</span>
+            <span class="result-tag">Bounce Rate 60% → 20%</span>
+            <span class="result-tag">100+ Top 10 Keywords</span>
+            <span class="result-tag">10 → 55 Leads/mo</span>
+            <span class="result-tag">13,000+ Backlinks</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="case-card">
-      <div class="case-tag">Generative Engine Optimization</div>
-      <h3>10% Monthly Traffic via AI Search — GEO Campaign</h3>
-      <p>Strategically optimized content to be cited and surfaced in ChatGPT, Gemini, and Perplexity answers. Focused on E-E-A-T, structured data, entity optimization, and conversational content formats that match how LLMs retrieve and present information.</p>
-      <div class="case-results">
-        <span class="result-pill">10% Traffic from AI Search</span>
-        <span class="result-pill">40+ SQL Leads/mo</span>
-        <span class="result-pill">ChatGPT · Gemini · Perplexity</span>
+      <div class="case-item">
+        <div class="case-left">
+          <div class="case-num">04</div>
+          <div class="case-type">Generative Engine Optimization</div>
+        </div>
+        <div class="case-right">
+          <div class="case-title">10% of monthly traffic from AI search — GEO that generates real pipeline</div>
+          <p class="case-desc">AI platforms like ChatGPT, Gemini, and Perplexity now answer questions directly — and the brands that get cited are the ones that planned for it. I built a GEO strategy around E-E-A-T signals, entity clarity, structured data, and content formats that match how language models extract information. The result was consistent citation across all three platforms, contributing 10% of monthly organic traffic and 40+ qualified leads per month through AI channels.</p>
+          <div class="case-results">
+            <span class="result-tag">10% Traffic from AI Search</span>
+            <span class="result-tag">40+ SQL Leads/mo</span>
+            <span class="result-tag">ChatGPT · Gemini · Perplexity</span>
+          </div>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
 
 <!-- GEO -->
 <section id="geo">
-  <div class="section-tag">Emerging Specialization</div>
-  <h2 class="section-title">Generative Engine Optimization (GEO)</h2>
-  <div class="geo-grid">
-    <div class="geo-text">
-      <p>As AI-powered search reshapes how people find information, I've been at the forefront of optimizing content for large language models and AI answer engines.</p>
-      <p>GEO goes beyond traditional SEO — it's about making your brand <strong>the source that AI chooses to cite</strong> when users ask questions in ChatGPT, Gemini, and Perplexity.</p>
-      <p>My GEO approach includes: structured data and entity optimization, E-E-A-T signal strengthening, conversational content formats, topic authority building, and citation-worthy content creation — resulting in <strong>10% of client traffic and 40+ SQL leads monthly from AI platforms alone.</strong></p>
-    </div>
-    <div class="geo-platforms">
-      <div class="platform-row"><div class="platform-icon">🤖</div><div><div class="platform-name">ChatGPT / OpenAI</div><div class="platform-desc">Optimizing for GPT-cited answers and Bing-indexed content</div></div></div>
-      <div class="platform-row"><div class="platform-icon">🔷</div><div><div class="platform-name">Google Gemini</div><div class="platform-desc">AI Overviews and Gemini answer pack optimization</div></div></div>
-      <div class="platform-row"><div class="platform-icon">🔍</div><div><div class="platform-name">Perplexity AI</div><div class="platform-desc">Source citation optimization for Perplexity search results</div></div></div>
-      <div class="platform-row"><div class="platform-icon">📊</div><div><div class="platform-name">E-E-A-T & Entities</div><div class="platform-desc">Building topical authority that LLMs trust and reference</div></div></div>
+  <div class="wrap">
+    <div class="sec-label">Specialization</div>
+    <div class="sec-title">Generative Engine Optimization</div>
+    <div class="geo-grid">
+      <div class="geo-text">
+        <p>Most SEO teams are still focused entirely on Google's blue links. That's not wrong — but it's incomplete. AI-powered search platforms now answer questions directly, and if your brand isn't the source being cited, you're invisible in those answers.</p>
+        <p>GEO is about making your content the thing that ChatGPT, Gemini, and Perplexity choose to reference. The signals that matter here are different from traditional SEO — it's about <strong>topical authority, factual clarity, entity recognition, and content structure</strong> that language models can confidently extract and present.</p>
+        <p>At DemandNXT, this wasn't experimental — it produced 10% of monthly traffic and 40+ SQL leads per month, entirely from AI search. That's a channel most teams are still ignoring.</p>
+      </div>
+      <div>
+        <div class="geo-table">
+          <div class="geo-row">
+            <div class="geo-plat">ChatGPT</div>
+            <div class="geo-detail">Optimizing Bing-indexed content for GPT answer citations through structured, authoritative content.</div>
+          </div>
+          <div class="geo-row">
+            <div class="geo-plat">Google Gemini</div>
+            <div class="geo-detail">AI Overviews and Gemini answer pack presence through E-E-A-T and entity optimization.</div>
+          </div>
+          <div class="geo-row">
+            <div class="geo-plat">Perplexity AI</div>
+            <div class="geo-detail">Citation-worthy content that earns consistent source references in Perplexity results.</div>
+          </div>
+          <div class="geo-row">
+            <div class="geo-plat">Entity & Schema</div>
+            <div class="geo-detail">Structured data that helps AI systems confidently identify and use your content.</div>
+          </div>
+          <div class="geo-row">
+            <div class="geo-plat">E-E-A-T Signals</div>
+            <div class="geo-detail">Author credibility, topical depth, and content quality that LLMs weight when choosing sources.</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<div id="contact">
-  <div class="inner">
-    <div class="section-tag">Let's Connect</div>
-    <h2 class="section-title">Get In Touch</h2>
-    <p>Open to SEO Specialist roles — remote or Bangalore-based. If you're looking for someone who can take your organic channel from underperforming to a consistent lead engine, let's talk.</p>
-    <div class="contact-links">
-      <a href="mailto:bheemb300@gmail.com" class="contact-btn email">📧 bheemb300@gmail.com</a>
-      <a href="https://linkedin.com/in/bhemesha-seo-analyst" target="_blank" class="contact-btn linkedin">💼 LinkedIn Profile</a>
-      <a href="tel:+916362191558" class="contact-btn phone">📞 +91 6362191558</a>
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-label">Contact</div>
+    <div class="sec-title">Let's talk</div>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-text">I'm looking for SEO Specialist roles — remote or Bangalore-based. If your B2B product's organic channel isn't performing the way it should, I'd be glad to have a straight conversation about what's holding it back.</p>
+        <div class="contact-links">
+          <a href="mailto:bheemb300@gmail.com" class="c-link">
+            <span class="c-key">Email</span>
+            <span class="c-val">bheemb300@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/bhemesha-seo-analyst" target="_blank" class="c-link">
+            <span class="c-key">LinkedIn</span>
+            <span class="c-val">linkedin.com/in/bhemesha-seo-analyst</span>
+          </a>
+          <a href="tel:+916362191558" class="c-link">
+            <span class="c-key">Phone</span>
+            <span class="c-val">+91 6362191558</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="avail-card">
+          <div class="avail-dot-row">
+            <div class="avail-dot"></div>
+            <div class="avail-status">Available Now</div>
+          </div>
+          <h3>Open to new roles</h3>
+          <p>Looking for a position where I can own the organic channel end-to-end — from technical audit through content and link strategy to GEO. Ideally a B2B product with real growth ambitions.</p>
+        </div>
+      </div>
     </div>
-    <div class="contact-info">📍 Bangalore, India &nbsp;·&nbsp; Available for remote opportunities worldwide</div>
   </div>
-</div>
+</section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Bhemesha C M · SEO Specialist · Bangalore, India</p>
-  <p style="margin-top:6px;font-size:.75rem;">Built with purpose — optimized for humans and search engines alike.</p>
+  <div class="footer-inner">
+    <span>© 2026 Bhemesha C M</span>
+    <span>SEO Specialist · Bangalore, India</span>
+  </div>
 </footer>
 
 </body>
